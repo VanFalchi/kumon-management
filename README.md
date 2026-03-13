@@ -43,8 +43,8 @@ docker compose up --build
 | Fase | Nome | Status |
 |------|------|--------|
 | 0 | Planejamento e estrutura inicial | ✅ Concluída |
-| 1 | Setup: FastAPI + PostgreSQL + Docker + JWT | 🔄 Próxima |
-| 2 | Models e migrations (Alembic) | ⏳ Backlog |
+| 1 | Setup: FastAPI + PostgreSQL + Docker + JWT | ✅ Concluída |
+| 2 | Models e migrations (Alembic) | 🔄 Próxima |
 | 3 | CRUDs: alunos, responsáveis, matrículas | ⏳ Backlog |
 | 4 | Integração Efi Bank | ⏳ Backlog |
 | 5 | Cobranças e boletos | ⏳ Backlog |
