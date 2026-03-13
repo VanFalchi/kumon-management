@@ -1,0 +1,26 @@
+# Ambiente
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Certificados e segredos
+certs/
+*.p12
+
+# Banco de dados local
+*.db
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
