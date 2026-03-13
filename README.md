@@ -44,8 +44,8 @@ docker compose up --build
 |------|------|--------|
 | 0 | Planejamento e estrutura inicial | ✅ Concluída |
 | 1 | Setup: FastAPI + PostgreSQL + Docker + JWT | ✅ Concluída |
-| 2 | Models e migrations (Alembic) | 🔄 Próxima |
-| 3 | CRUDs: alunos, responsáveis, matrículas | ⏳ Backlog |
+| 2 | Models e migrations (Alembic) | ✅ Concluída |
+| 3 | CRUDs: alunos, responsáveis, matrículas | 🔄 Próxima |
 | 4 | Integração Efi Bank | ⏳ Backlog |
 | 5 | Cobranças e boletos | ⏳ Backlog |
 | 6 | Inadimplência e régua de cobrança | ⏳ Backlog |
@@ -59,6 +59,22 @@ docker compose up --build
 | 14 | Grade de horários PDF | ⏳ Backlog |
 
 ## Changelog
+
+## [0.3.0] - 2026-03-13
+
+### Adicionado
+- 18 models SQLAlchemy (alunos, responsáveis, matrículas, mesas, slots, horários, cobranças, lançamentos, categorias, fornecedores, contas fixas, documentos, WhatsApp log)
+- Migration Alembic criando todas as tabelas no PostgreSQL
+- Enum types para status, tipos e categorias
+
+## [0.2.0] - 2026-03-13
+
+### Adicionado
+- Configuração do Alembic para migrations
+- Conexão com PostgreSQL via SQLAlchemy (app/database.py)
+- Autenticação JWT (app/auth.py)
+- Rota POST /auth/token com login por usuário temporário
+- bcrypt para hash de senhas
 
 ### v0.1.0 — Fase 0 (Março 2026)
 - Estrutura inicial do projeto
