@@ -45,8 +45,8 @@ docker compose up --build
 | 0 | Planejamento e estrutura inicial | ✅ Concluída |
 | 1 | Setup: FastAPI + PostgreSQL + Docker + JWT | ✅ Concluída |
 | 2 | Models e migrations (Alembic) | ✅ Concluída |
-| 3 | CRUDs: alunos, responsáveis, matrículas | 🔄 Próxima |
-| 4 | Integração Efi Bank | ⏳ Backlog |
+| 3 | CRUDs: alunos, responsáveis, matrículas | ✅ Concluída |
+| 4 | Integração Efi Bank | 🔄 Próxima |
 | 5 | Cobranças e boletos | ⏳ Backlog |
 | 6 | Inadimplência e régua de cobrança | ⏳ Backlog |
 | 7 | Importação de extrato Efi | ⏳ Backlog |
@@ -59,6 +59,15 @@ docker compose up --build
 | 14 | Grade de horários PDF | ⏳ Backlog |
 
 ## Changelog
+
+## [0.4.0] - 2026-03-23
+
+### Adicionado
+- Schemas Pydantic para alunos, responsáveis, matrículas, matérias, mesas, slots e horários
+- CRUD completo: alunos, responsáveis, matérias, matrículas
+- CRUD completo: mesas, slots de horário, horários dos alunos
+- Endpoint de verificação de vagas por mesa + slot em tempo real
+- Validação automática de capacidade ao alocar aluno em horário
 
 ## [0.3.0] - 2026-03-13
 

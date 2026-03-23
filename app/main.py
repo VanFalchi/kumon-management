@@ -1,7 +1,7 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm
-from fastapi import Depends, HTTPException, status
-from app.auth import create_access_token, verify_password, get_password_hash
+from app.auth import create_access_token, verify_password
+from app.routers import alunos, responsaveis, materias, matriculas, mesas, slots_horario, horarios_alunos
 
 app = FastAPI(
     title="Kumon Management",
@@ -10,6 +10,7 @@ app = FastAPI(
 )
 
 # Usuário temporário até termos o banco configurado na Fase 2
+# Hash gerado para a senha: kumon2026
 TEMP_USER = {
     "username": "admin",
     "hashed_password": "$2b$12$3fq0UA2Reo2n.tYkdF0HY.6WNm6fCdKnFl9tYCdptMjY/HvZdGB.i"
@@ -33,3 +34,12 @@ def login(form_data: OAuth2PasswordRequestForm = Depends()):
         )
     token = create_access_token(data={"sub": form_data.username})
     return {"access_token": token, "token_type": "bearer"}
+
+# Routers
+app.include_router(alunos.router)
+app.include_router(responsaveis.router)
+app.include_router(materias.router)
+app.include_router(matriculas.router)
+app.include_router(mesas.router)
+app.include_router(slots_horario.router)
+app.include_router(horarios_alunos.router)

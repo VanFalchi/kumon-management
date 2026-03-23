@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.4.0] - 2026-03-23
+
+### Adicionado
+- Schemas Pydantic para alunos, responsáveis, matrículas, matérias, mesas, slots e horários
+- CRUD completo: alunos, responsáveis, matérias, matrículas
+- CRUD completo: mesas, slots de horário, horários dos alunos
+- Endpoint de verificação de vagas por mesa + slot em tempo real
+- Validação automática de capacidade ao alocar aluno em horário
+
 ## [0.3.0] - 2026-03-13
 
 ### Adicionado
