@@ -1,0 +1,9 @@
+tunnel: dcc54eef-d30c-4711-a711-01335268158c
+credentials-file: /home/vanfalchi/.cloudflared/dcc54eef-d30c-4711-a711-01335268158c.json
+
+ingress:
+  - hostname: www.kumonjales.com.br
+    service: http://172.23.88.6:8000
+  - hostname: kumon.kumonjales.com.br
+    service: http://172.23.88.6:8000
+  - service: http_status:404

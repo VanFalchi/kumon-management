@@ -60,6 +60,13 @@ docker compose up --build
 
 ## Changelog
 
+## [0.5.0] - 2026-03-31
+
+### Adicionado
+- Cloudflare Tunnel configurado (kumon-management)
+- Domínio www.kumonjales.com.br com HTTPS automático
+- Arquivo cloudflare/config.yml com configuração do túnel
+
 ## [0.4.0] - 2026-03-23
 
 ### Adicionado
