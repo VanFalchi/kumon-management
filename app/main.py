@@ -1,13 +1,21 @@
 from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm
+from contextlib import asynccontextmanager
 from app.auth import create_access_token, verify_password
-from app.routers import alunos, responsaveis, materias, matriculas, mesas, slots_horario, horarios_alunos, webhook
+from app.routers import alunos, responsaveis, materias, matriculas, mesas, slots_horario, horarios_alunos, webhook, cobrancas
+from app.jobs.scheduler import iniciar_scheduler, parar_scheduler
 
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    iniciar_scheduler()
+    yield
+    parar_scheduler()
 
 app = FastAPI(
     title="Kumon Management",
     description="Sistema de Gestão Financeira para Franquia Kumon",
-    version="0.1.0"
+    version="0.1.0",
+    lifespan=lifespan
 )
 
 # Usuário temporário até termos o banco configurado na Fase 2
@@ -45,3 +53,4 @@ app.include_router(mesas.router)
 app.include_router(slots_horario.router)
 app.include_router(horarios_alunos.router)
 app.include_router(webhook.router)
+app.include_router(cobrancas.router)

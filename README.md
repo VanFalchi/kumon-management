@@ -47,8 +47,8 @@ docker compose up --build
 | 2 | Models e migrations (Alembic) | ✅ Concluída |
 | 3 | CRUDs: alunos, responsáveis, matrículas | ✅ Concluída |
 | 4 | Integração Efi Bank | ✅ Concluída |
-| 5 | Cobranças e boletos | 🔄 Próxima |
-| 6 | Inadimplência e régua de cobrança | ⏳ Backlog |
+| 5 | Cobranças e boletos | ✅ Concluída |
+| 6 | Inadimplência e régua de cobrança | 🔄 Próxima |
 | 7 | Importação de extrato Efi | ⏳ Backlog |
 | 8 | Migração de dados do Kaits | ⏳ Backlog |
 | 9 | Contas a pagar | ⏳ Backlog |
@@ -59,6 +59,16 @@ docker compose up --build
 | 14 | Grade de horários PDF | ⏳ Backlog |
 
 ## Changelog
+
+## [0.7.0] - 2026-03-31
+
+### Adicionado
+- Schema e router de cobranças (CRUD completo)
+- Endpoint POST /cobrancas/{id}/emitir-boleto — integrado com Efi Bank
+- Endpoint POST /cobrancas/{id}/baixa-manual — para pagamentos em dinheiro
+- Job de geração automática de cobranças mensais (dia 1, 06:00)
+- APScheduler integrado ao ciclo de vida do FastAPI
+- Renomeação de arquivos para evitar problemas com caracteres especiais
 
 ## [0.6.0] - 2026-03-31
 

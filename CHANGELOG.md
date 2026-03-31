@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.7.0] - 2026-03-31
+
+### Adicionado
+- Schema e router de cobranças (CRUD completo)
+- Endpoint POST /cobrancas/{id}/emitir-boleto — integrado com Efi Bank
+- Endpoint POST /cobrancas/{id}/baixa-manual — para pagamentos em dinheiro
+- Job de geração automática de cobranças mensais (dia 1, 06:00)
+- APScheduler integrado ao ciclo de vida do FastAPI
+- Renomeação de arquivos para evitar problemas com caracteres especiais
+
 ## [0.6.0] - 2026-03-31
 
 ### Adicionado
