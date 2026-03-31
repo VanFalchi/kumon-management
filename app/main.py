@@ -1,7 +1,8 @@
 from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm
 from app.auth import create_access_token, verify_password
-from app.routers import alunos, responsaveis, materias, matriculas, mesas, slots_horario, horarios_alunos
+from app.routers import alunos, responsaveis, materias, matriculas, mesas, slots_horario, horarios_alunos, webhook
+
 
 app = FastAPI(
     title="Kumon Management",
@@ -43,3 +44,4 @@ app.include_router(matriculas.router)
 app.include_router(mesas.router)
 app.include_router(slots_horario.router)
 app.include_router(horarios_alunos.router)
+app.include_router(webhook.router)

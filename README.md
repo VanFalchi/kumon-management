@@ -46,8 +46,8 @@ docker compose up --build
 | 1 | Setup: FastAPI + PostgreSQL + Docker + JWT | ✅ Concluída |
 | 2 | Models e migrations (Alembic) | ✅ Concluída |
 | 3 | CRUDs: alunos, responsáveis, matrículas | ✅ Concluída |
-| 4 | Integração Efi Bank | 🔄 Próxima |
-| 5 | Cobranças e boletos | ⏳ Backlog |
+| 4 | Integração Efi Bank | ✅ Concluída |
+| 5 | Cobranças e boletos | 🔄 Próxima |
 | 6 | Inadimplência e régua de cobrança | ⏳ Backlog |
 | 7 | Importação de extrato Efi | ⏳ Backlog |
 | 8 | Migração de dados do Kaits | ⏳ Backlog |
@@ -59,6 +59,15 @@ docker compose up --build
 | 14 | Grade de horários PDF | ⏳ Backlog |
 
 ## Changelog
+
+## [0.6.0] - 2026-03-31
+
+### Adicionado
+- Integração com API Efi Bank (Pix cobv)
+- Serviço de geração de boleto Bolix com desconto de 10%
+- Serviço de cancelamento e consulta de boleto
+- Endpoint webhook POST /webhook/efi/pagamento com idempotência
+- Certificados SSL configurados para homologação
 
 ## [0.5.0] - 2026-03-31
 

@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.6.0] - 2026-03-31
+
+### Adicionado
+- Integração com API Efi Bank (Pix cobv)
+- Serviço de geração de boleto Bolix com desconto de 10%
+- Serviço de cancelamento e consulta de boleto
+- Endpoint webhook POST /webhook/efi/pagamento com idempotência
+- Certificados SSL configurados para homologação
+
 ## [0.5.0] - 2026-03-31
 
 ### Adicionado
