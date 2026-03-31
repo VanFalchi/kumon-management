@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.8.0] - 2026-03-31
+
+### Adicionado
+- Cancelamento e reemissão de boleto
+- Boletos avulsos: matrícula e rescisão
+- Geração de carnê em lote (router /boletos/carne)
+- Serviço de carnê (carne_service.py)
+- Router de boletos separado do router de cobranças
+- Job de emissão automática de boletos digitais (jobs_boletos.py)
+- Job de verificação de inadimplência (jobs_boletos.py)
+- Evolution API configurada no Docker Compose
+- Redis configurado no Docker Compose
+- Serviço WhatsApp (whatsapp_service.py) — integração pendente
+
 ## [0.7.0] - 2026-03-31
 
 ### Adicionado
