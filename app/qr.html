@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<img id="qr" />
+<script>
+fetch('http://localhost:8081/instance/connect/kumon', {
+  headers: {'apikey': 'kumon-evolution-key'}
+})
+.then(r => r.json())
+.then(data => {
+  document.getElementById('qr').src = data.base64;
+});
+</script>
+</body>
+</html>

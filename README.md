@@ -47,7 +47,7 @@ docker compose up --build
 | 2 | Models e migrations (Alembic) | ✅ Concluída |
 | 3 | CRUDs: alunos, responsáveis, matrículas | ✅ Concluída |
 | 4 | Integração Efi Bank | ✅ Concluída |
-| 5 | Cobranças e boletos | ✅ Concluída |
+| 5 | Cobranças e boletos | 🔄 Em andamento |
 | 6 | Inadimplência e régua de cobrança | 🔄 Próxima |
 | 7 | Importação de extrato Efi | ⏳ Backlog |
 | 8 | Migração de dados do Kaits | ⏳ Backlog |
@@ -60,19 +60,20 @@ docker compose up --build
 
 ## Changelog
 
-## [0.8.0] - 2026-03-31
+## [0.8.0] - 2026-04-13
 
 ### Adicionado
 - Cancelamento e reemissão de boleto
 - Boletos avulsos: matrícula e rescisão
-- Geração de carnê em lote (router /boletos/carne)
-- Serviço de carnê (carne_service.py)
-- Router de boletos separado do router de cobranças
+- Router de boletos separado (/boletos)
+- Serviço de carnê em lote (carne_service.py)
 - Job de emissão automática de boletos digitais (jobs_boletos.py)
 - Job de verificação de inadimplência (jobs_boletos.py)
-- Evolution API configurada no Docker Compose
-- Redis configurado no Docker Compose
-- Serviço WhatsApp (whatsapp_service.py) — integração pendente
+- Evolution API v1.8.2 + Redis no Docker Compose
+- Serviço WhatsApp via Evolution API (whatsapp_service.py)
+
+### Pendente
+- Conexão WhatsApp: instável no WSL2, funcional em servidor Linux
 
 ## [0.7.0] - 2026-03-31
 
